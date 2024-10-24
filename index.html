@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jayanth Balina Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"></a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+			  <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Jayanth</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Data Scientist  ',
+						'Data Engineer  ',
+						'Data Analyst   ',
+						'Software Engineer  ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <!-- <h2>A Senior Data Analyst</h2> -->
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/jayanthbalina/" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-4">LinkedIn</a> 
+							<a href="https://github.com/jayanthbalina" target="_blank" rel="noopener noreferrer" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>jayanth balina</span></p>
+										<p><span class="title-s">Education: </span> <span>M.S in Computer Science, University of North Texas(UNT), GPA : 3.7 (top 1%)</span></p>
+										<p><span class="title-s">Experience: </span> <span>5 Years</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								  <div class="skill-mf">
+									<p class="title-s" style="font-size: 24px; font-weight: bold; margin-bottom: 15px; color: #FFFFFF;">Skills</p>
+									<ul style="list-style-type: none; padding-left: 0;">
+										<li style="font-size: 18px; margin-bottom: 10px;">
+											<span class="title-s">⚡ Python</span>
+										</li>
+										<li style="font-size: 18px; margin-bottom: 10px;">
+											<span class="title-s">⚡ SQL</span>
+										</li>
+										<li style="font-size: 18px; margin-bottom: 10px;">
+											<span class="title-s">⚡ Data Engineering</span>
+										</li>
+										<li style="font-size: 18px; margin-bottom: 10px;">
+											<span class="title-s">⚡ Big Data Processing</span>
+										</li>
+										<li style="font-size: 18px; margin-bottom: 10px;">
+											<span class="title-s">⚡ Data Visualization</span>
+										</li>
+										<li style="font-size: 18px; margin-bottom: 10px;">
+											<span class="title-s">⚡ Machine Learning</span>
+										</li>
+										<li style="font-size: 18px; margin-bottom: 10px;">
+											<span class="title-s">⚡ Statistical Analysis</span>
+										</li>
+									</ul>
+								</div>
+								
+								
+
+								
+							
+								</div>
+							</div>
+						</div>
+					</div>
+								
+								
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+							
+								<h2 class="mb-4">About Me</h2>
+								
+								
+
+								<div class="header-mf">
+									<p class="title-s" style="font-size: 24px; font-weight: bold; margin-bottom: 15px; color: #DDDDDD;">
+										Seasoned Data Engineer Proficient in AWS, Azure, GCP, and Big Data Solutions
+									</p>
+									<ul style="list-style-type: none; padding-left: 0;">
+										<li style="font-size: 18px; margin-bottom: 10px; color: #CCCCCC;">
+											<span class="title-s">🏷️ Computer Science Student at the University of North Texas</span>
+										</li>
+										<li style="font-size: 18px; margin-bottom: 10px; color: #CCCCCC;">
+											<span class="title-s">🏷️ Formerly Contributed to IQVIA and UST as Data Engineering Specialist</span>
+										</li>
+									</ul>
+								</div>
+								
+								
+								
+								
+								
+								
+								
+								
+
+
+								</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="20">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+    <section class="ftco-section" id="project-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-5">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h2 class="mb-4">Projects</h2>
+			</div>
+		  </div>
+		  <div class="row d-flex">
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="https://github.com/jayanthbalina/youtube-analysis-AWS-DE-Project" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/proj_10.jpeg');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="https://github.com/jayanthbalina/youtube-analysis-AWS-DE-Project" target="_blank" rel="noopener noreferrer">Youtube-Analysis-AWS-DE-Project
+					</a></h3>
+					<p>This project aims to securely manage, streamline, and perform analysis on the structured and semi-structured YouTube videos data based on the video categories and the trending metrics. </p>
+				  </div>
+				</div>
+			  </div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/jayanthbalina/twitter-airflow-data-engineering-project" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/jayanthbalina/twitter-airflow-data-engineering-project" target="_blank" rel="noopener noreferrer">Twitter-Airflow-Data-Engineering-Project</a></h3>
+				  <p>The goal of this project is to extract tweets from a specific user account (in this case, @elonmusk), transform the data by cleaning and refining it, and load it into a storage system like AWS S3 or save it locally for further analysis. The pipeline is orchestrated using Apache Airflow for automation, scheduling, and management.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/jayanthbalina/Tokyo-Olympic-Azure-DataEngineering-Project" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/jayanthbalina/Tokyo-Olympic-Azure-DataEngineering-Project" target="_blank" rel="noopener noreferrer">Tokyo-Olympic-Azure-DataEngineering-Project</a></h3>
+				  <p>Overall, the primary goal of your project is to build a comprehensive data pipeline that enables efficient data ingestion, transformation, and analysis of the Tokyo Olympics dataset. This ultimately aims to provide valuable insights and reports that inform stakeholders about the event's outcomes, performances, and trends.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+			  <a href="https://github.com/jayanthbalina/stock-market-kafka-data-engineering-project" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/proj_13.jpg');">
+			  </a>
+			  <div class="text mt-3 float-right d-block">
+  
+				<h3 class="heading"><a href="https://github.com/jayanthbalina/stock-market-kafka-data-engineering-project" target="_blank" rel="noopener noreferrer">Stock-Market-Kafka-Data-Engineering-Project</a></h3>
+				<p>In this project, you will execute an End-To-End Data Engineering Project on Real-Time Stock Market Data using Kafka.We are going to use different technologies such as Python, Amazon Web Services (AWS), Apache Kafka, Glue, Athena, and SQL. </p>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+			  <a href="https://github.com/jayanthbalina/uber-etl-pipeline-data-engineering-project-jay-GCP" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+			  </a>
+			  <div class="text mt-3 float-right d-block">
+  
+				<h3 class="heading"><a href="https://github.com/jayanthbalina/uber-etl-pipeline-data-engineering-project-jay-GCP" target="_blank" rel="noopener noreferrer">Uber-ETL-Pipeline-Data-Engineering-Project-GCP</a></h3>
+				<p>The goal of this project is to perform data analytics on Uber data using various tools and technologies, including GCP Storage, Python, Compute Instance, Mage Data Pipeline Tool, BigQuery, and Looker Studio.</p>
+			  </div>
+			</div>
+		  </div>
+			<div class="col-md-4 d-flex ftco-animate">
+			  <div class="blog-entry justify-content-end">
+				<a href="https://github.com/jayanthbalina/ClientInformationInsights_LendingClub_Project" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/proj_3.png');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+				  <h3 class="heading"><a href="https://github.com/jayanthbalina/ClientInformationInsights_LendingClub_Project" target="_blank" rel="noopener noreferrer">ClientInformationInsights_LendingClub_Project</a></h3>
+				  <p>The goal of the project is to leverage product analytics to assess lending risks and optimize co-brand credit card performance through data-driven insights. This includes developing a robust risk assessment model and providing actionable recommendations for improved lending and credit card strategies.</p>
+				</div>
+			  </div>
+			</div>
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="https://github.com/jayanthbalina/Exploring-Population-Dynamics-and-Education-Trends" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/proj_5.png');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="https://github.com/jayanthbalina/Exploring-Population-Dynamics-and-Education-Trends" target="_blank" rel="noopener noreferrer">Exploring-Population-Dynamics-and-Education-Trends</a></h3>
+					<p>The goal of the project is to analyze the intersection of population dynamics and education trends globally to provide actionable insights for informed decision-making in education policy and resource allocation. By understanding these relationships, the project aims to promote inclusive education and support socio-economic development. </p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="https://github.com/jayanthbalina/ETL-Pipeline-for-Real-Time-Data-Analysis-using-Open-Weather-API-Data" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/proj_11.png');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="https://github.com/jayanthbalina/ETL-Pipeline-for-Real-Time-Data-Analysis-using-Open-Weather-API-Data" target="_blank" rel="noopener noreferrer">ETL-Pipeline-for-Real-Time-Data-Analysis-using-Open-Weather-API-Data</a></h3>
+					<p>The goal of the ETL Pipeline for Real-Time Data Analysis using OpenWeather API Data project is to automate the extraction, transformation, and loading of weather data into a data storage solution for timely analysis. This enables stakeholders to gain insights into weather patterns and make informed decisions based on real-time data.</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4 d-flex ftco-animate">
+				  <div class="blog-entry justify-content-end">
+				  <a href="https://github.com/jayanthbalina/Predictive-Analysis-of-Housing-Prices-Using-Ames-Housing-Dataset" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/proj_12.png');">
+				  </a>
+				  <div class="text mt-3 float-right d-block">
+	
+					<h3 class="heading"><a href="https://github.com/jayanthbalina/Predictive-Analysis-of-Housing-Prices-Using-Ames-Housing-Dataset" target="_blank" rel="noopener noreferrer">Predictive-Analysis-of-Housing-Prices-Using-Ames-Housing-Dataset</a></h3>
+					<p>The goal of the Predictive Analysis of Housing Prices project using the Ames Housing dataset is to accurately predict housing prices by analyzing key factors through descriptive and predictive analyses. This helps real estate investors make informed decisions about property valuations, maximizing their investment returns. </p>
+				  </div>
+				</div>
+			  </div>
+		</div>
+	  </section>
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Resume</h2>
+        <p>Experienced Data Engineer and Analyst with expertise in designing data workflows and infrastructure on Azure and AWS.
+				Proficient in big data technologies, real-time processing, and data visualization. Skilled in building and optimizing ETL
+				pipelines to enhance data efficiency, quality, and accessibility. Adept at creating interactive dashboards and reports to support
+				data-driven decision-making for stakeholders.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-2022</span>
+						<h2>Data Engineer</h2>
+						<span class="position">IQVIA</span>
+							<ul>
+								<ul>
+									<li>Designed and implemented data workflows using Azure Data Factory, improving data movement and transformation efficiency by 40%.</li>
+									<li>Architected and maintained scalable data lakes with Azure Data Lake Storage Gen2, enhancing data organization and retrieval speed by 50%.</li>
+									<li>Leveraged Azure Databricks for data exploration, manipulation, and model building, resulting in a 30% increase in data quality and actionable business insights.</li>
+									<li>Expanded expertise in Spark Structured Streaming with Kafka, facilitating real-time data processing and analysis, which improved data processing speed by 35%.</li>
+									<li>Developed interactive dashboards and reports using Power BI and Azure Synapse Analytics, supporting data-driven decision-making and increasing reporting efficiency by 45%.</li>
+									<li>Implemented robust security measures and compliance protocols, ensuring data integrity and confidentiality, thereby reducing data breaches and incidents by 20%.</li>
+								</ul>
+								
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2019-2021</span>
+						<h2>Associate Data Engineer</h2>
+						<span class="position">UST</span>
+							<ul>
+								<ul>
+									<li>Designed, implemented, and supported data lake infrastructure using AWS big data stack (Redshift, S3, Glue, EMR), streamlining data integration and reporting processes and improving efficiency by 50%.</li>
+									<li>Utilized batch and streaming data architectures for real-time data ingestion and processing, enhancing data accessibility and reducing data latency by 40%.</li>
+									<li>Developed ETL pipelines and data models, which improved data processing and transformation efficiency by 60%, supporting both ad-hoc and pre-built reporting requirements.</li>
+									<li>Conducted performance tuning for data queries and applications, boosting system efficiency and reliability by 80%, ensuring alignment with SLAs and performance targets.</li>
+									<li>Collaborated closely with cross-functional teams, including business stakeholders and data analysts, to gather requirements and deliver data solutions aligned with business goals and requirements.</li>
+								</ul>
+								
+
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Skills</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+						<span class="date">Programming Languages</span>
+    					<p class="mt-4"> Python, C#, Java, SQL.</p>
+						<span class="date">Frameworks</span>
+						<p class="mt-4">PySpark, Numpy, Sci-kit learn, Pandas, Matplotlib.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+						<span class="date">Infrastructure</span>
+    					<p class="mt-4">AWS, GCP, Azure, Spark, Hadoop, Kafka  </p>
+						<span class="date">Other Tools</span>
+						<p class="mt-4"> Tableau, PowerBI, Looker, Git, Jenkins, Docker, Kubernetes, Linux/Unix.</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://jayanthbalina.github.io/MyPortfolio/assets/Jayanth_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Contact Me</h2>
+          </div>
+        </div>
+		
+		<div class="row d-flex contact-info mb-5">
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-map-signs"></span>
+					</div>
+					<h3 class="mb-4">Address</h3>
+				  <p>903 Avenue C, Denton, TX</p>
+				</div>
+			</div>
+			
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-paper-plane"></span>
+					</div>
+					<h3 class="mb-4">Email Address</h3>
+					<p>jayanthbalina135@gmail.com</a></p>
+					<p>jayanthbabubalina@my.unt.edu</a></p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+				<div class="align-self-stretch box p-4 text-center">
+					<div class="icon d-flex align-items-center justify-content-center">
+						<span class="icon-globe"></span>
+					</div>
+					<h3 class="mb-4">Download Resume</h3>
+					<p><a href="https://jayanthbalina.github.io/MyPortfolio/assets/Jayanth_Resume.pdf" target="_blank" rel="noopener noreferrer">Link</a></p>
+				</div>
+				
+			</div>
+
+			<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">LinkedIn</h3>
+				<p><a href="https://www.linkedin.com/in/jayanthbalina/" target="_blank" rel="noopener noreferrer">Link</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/6bmedFiELEiwUhcz5" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			<!-- </div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/rishabhnmishra/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div> -->
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
